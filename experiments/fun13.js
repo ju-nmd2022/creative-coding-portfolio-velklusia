@@ -20,7 +20,7 @@ function setup() {
 function draw() {
   background(isWhite ? 255 : 0);
   stroke(isWhite ? 0 : 255);
-  strokeWeight(1.1);
+  strokeWeight(0.7);
 
   generateFlowField();
   
