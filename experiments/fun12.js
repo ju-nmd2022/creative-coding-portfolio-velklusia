@@ -9,8 +9,8 @@ let colorChangeInterval = 3000;
 let lastColorChange = 0;
 
 function setup() {
-  createCanvas(550, 550);
-  cellSize = (width - (gridSize - 1) * spacing) / gridSize;
+  createCanvas(windowWidth, windowHeight);
+  calculateCellSizeAndSpacing();
   noFill();
   frameRate(30); 
   generatePoints();  
@@ -41,6 +41,7 @@ function draw() {
 
 function generatePoints() {
   points = []; 
+  calculateCellSizeAndSpacing(); // Recalculate sizes based on new canvas size
 
   for (let i = 0; i < gridSize; i++) {
     for (let j = 0; j < gridSize; j++) {
@@ -54,6 +55,16 @@ function generatePoints() {
       }
     }
   }
+}
+
+function calculateCellSizeAndSpacing() {
+  cellSize = (width - (gridSize - 1) * spacing) / gridSize;
+  spacing = (width - gridSize * cellSize) / (gridSize - 1);
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  generatePoints(); // Regenerate points based on new size
 }
 
 
