@@ -1,132 +1,92 @@
-let gridSize = 8;
-let cellSize;
-let spacing = 10;
-let grid = [];
-let isWhite = false;
-let numPoints = 50;
+let grid;
+let cols, rows;
+let resolution = 7;
+let colors;
+let bgColor;
+let pointColor;
+let currentColorIndex = 0;
 
 function setup() {
-  createCanvas(550, 550);
-  cellSize = (width - (gridSize - 1) * spacing) / gridSize; 
+  createCanvas(800, 800);
+  cols = Math.floor(width / resolution);
+  rows = Math.floor(height / resolution);
+
+  colors = [
+    [color(121, 35, 89), color(255, 255, 255)],
+    [color(255, 255, 255), color(121, 35, 89)]
+  ];
+
+  grid = Array.from({ length: rows }, () => Array(cols).fill(0).map(() => random() > 0.5 ? 1 : 0));
+
+  interval = setInterval(refreshPattern, 1000);
+
   noLoop();
-  initializeGrid();
+  refreshColors();
+  drawPattern();
 }
 
 function draw() {
-  background(isWhite ? 255 : 0);
-  stroke(isWhite ? 0 : 255);
-  strokeWeight(0.3);
-  updateGrid();
+  background(bgColor);
   drawGrid();
 }
 
-function initializeGrid() {
-  for (let i = 0; i < gridSize; i++) {
-    grid[i] = [];
-    for (let j = 0; j < gridSize; j++) {
-      grid[i][j] = generateLinePattern();
-    }
-  }
+function refreshColors() {
+  bgColor = colors[currentColorIndex][0];
+  pointColor = colors[currentColorIndex][1];
+  currentColorIndex = (currentColorIndex + 1) % colors.length; // Color switch
 }
 
-function generateLinePattern() {
-  let points = [];
-  let startPoint = { x: random([0, cellSize]), y: random([0, cellSize]) };
-  points.push(startPoint);
+function drawPattern() {
+  let newGrid = Array.from({ length: rows }, () => Array(cols).fill(0));
+  
+  for (let y = 0; y < rows; y++) {
+    for (let x = 0; x < cols; x++) {
+      let state = grid[y][x];
+      let neighbors = countNeighbors(x, y);
 
-  for (let i = 0; i < numPoints - 1; i++) {
-    let prevX = points[points.length - 1].x;
-    let prevY = points[points.length - 1].y;
-
-    let newX = prevX + random([-cellSize / 4, 0, cellSize / 4]);
-    let newY = prevY + random([-cellSize / 4, 0, cellSize / 4]);
-
-    // Keep points within cells
-    newX = constrain(newX, 0, cellSize);
-    newY = constrain(newY, 0, cellSize);
-
-    points.push({ x: newX, y: newY });
-  }
-
-  return points;
-}
-
-function drawGrid() {
-  for (let i = 0; i < gridSize; i++) {
-    for (let j = 0; j < gridSize; j++) {
-      let xOffset = i * (cellSize + spacing);
-      let yOffset = j * (cellSize + spacing);
-      drawLinePattern(xOffset, yOffset, grid[i][j]);
-    }
-  }
-}
-
-function updateGrid() {
-  let newGrid = [];
-  for (let i = 0; i < gridSize; i++) {
-    newGrid[i] = [];
-    for (let j = 0; j < gridSize; j++) {
-      let neighbors = getNeighbors(i, j);
-      let activeNeighbors = countActiveNeighbors(neighbors);
-      
-      if (activeNeighbors > 2) {
-        // Slight mutation
-        newGrid[i][j] = mutatePattern(grid[i][j]);
-      } else if (activeNeighbors < 2) {
-        // Make it simple again
-        newGrid[i][j] = generateLinePattern();
+      // Cellular automata
+      if (state === 1 && (neighbors < 1 || neighbors > 2)) {
+        newGrid[y][x] = 0;
+      } else if (state === 0 && neighbors === 3) {
+        newGrid[y][x] = 1;
       } else {
-        // Keep it same
-        newGrid[i][j] = grid[i][j];
+        newGrid[y][x] = state;
       }
     }
   }
+
   grid = newGrid;
 }
 
-function getNeighbors(x, y) {
-  let neighbors = [];
-  for (let i = -1; i <= 1; i++) {
-    for (let j = -1; j <= 1; j++) {
-      if (i === 0 && j === 0) continue; // Skip
-      let ni = x + i;
-      let nj = y + j;
-      if (ni >= 0 && ni < gridSize && nj >= 0 && nj < gridSize) {
-        neighbors.push(grid[ni][nj]);
-      }
+function drawGrid() {
+  noFill();
+  strokeWeight(3);
+  for (let y = 0; y < rows; y++) {
+    for (let x = 0; x < cols; x++) {
+      let currentColor = grid[y][x] === 1 ? pointColor : bgColor;
+      stroke(currentColor);
+      point(x * resolution, y * resolution);
     }
   }
-  return neighbors;
 }
 
-function countActiveNeighbors(neighbors) {
-  return neighbors.filter(neighbor => neighbor.length > numPoints / 2).length;
-}
-
-function mutatePattern(pattern) {
-  let mutatedPattern = [];
-  for (let i = 0; i < pattern.length; i++) {
-    let mutatedPoint = {
-      x: pattern[i].x + random([-cellSize / 8, 0, cellSize / 8]),
-      y: pattern[i].y + random([-cellSize / 8, 0, cellSize / 8])
-    };
-    mutatedPoint.x = constrain(mutatedPoint.x, 0, cellSize);
-    mutatedPoint.y = constrain(mutatedPoint.y, 0, cellSize);
-    mutatedPattern.push(mutatedPoint);
+function countNeighbors(x, y) {
+  let total = 0;
+  for (let j = -1; j <= 1; j++) {
+    for (let i = -1; i <= 1; i++) {
+      if (i === 0 && j === 0) continue;
+      
+      let ni = (x + i + cols) % cols;
+      let nj = (y + j + rows) % rows;
+      
+      total += grid[nj][ni];
+    }
   }
-  return mutatedPattern;
+  return total;
 }
 
-function drawLinePattern(xOffset, yOffset, pattern) {
-  beginShape();
-  for (let i = 0; i < pattern.length; i++) {
-    vertex(xOffset + pattern[i].x, yOffset + pattern[i].y);
-  }
-  endShape();
-}
-
-function mouseClicked() {
-  isWhite = !isWhite;
-  initializeGrid();
+function refreshPattern() {
+  refreshColors();
+  drawPattern();
   redraw();
 }

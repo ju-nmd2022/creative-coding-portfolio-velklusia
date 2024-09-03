@@ -50,7 +50,7 @@ function draw() {
   }
   endShape();
 
-  zOffset += 0.1; // Adjusts the noise over time for dynamic flow
+  zOffset += 0.1; // Adjusts the noise over time
 }
 
 function generateFlowField() {
