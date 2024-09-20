@@ -2,7 +2,7 @@
   {
     "file": "experiments/fun1.js",
     "name": "Wings & Whispers",
-    "description": "Inspired by paper birds and the whispers of feathers, this piece symbolizes constant change and the unexpected. Once clicked it reveals shapes of paper birds that are beyond initial perception. For this work, I calculate the position for each cell and draw line patterns using the drawLinePattern function. The generateLines function creates an array of patterns, starting from a random point, while generateLinePattern builds a series of points within each cell. Then the drawLinePattern function connects these points to form shapes."
+    "description": "Inspired by paper birds and the whispers of feathers, this piece symbolizes the unexpected. Once clicked it reveals shapes of paper birds that are beyond initial perception. For this work, I calculate the position for each cell and draw line patterns using the drawLinePattern function. The generateLines function creates an array of patterns, starting from a random point, while generateLinePattern builds a series of points within each cell. Then the drawLinePattern function connects these points to form shapes."
   },
   {
     "file": "experiments/fun2.js",

@@ -16,7 +16,6 @@ function draw() {
   background(isWhite ? 255 : 0);
   stroke(isWhite ? 0 : 255);
   strokeWeight(1.2);
-//begin and end shape here instead
   for (let i = 0; i < gridSize; i++) {
     for (let j = 0; j < gridSize; j++) {
       let xOffset = i * (cellSize + spacing);
