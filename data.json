@@ -1,42 +1,47 @@
 [
   {
     "file": "experiments/fun1.js",
-    "name": "Name of your experiment",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "name": "Wings & Whispers",
+    "description": "Inspired by paper birds and the whispers of feathers, this piece symbolizes constant change and the unexpected. Once clicked it reveals shapes of paper birds that are beyond initial perception. For this work, I calculate the position for each cell and draw line patterns using the drawLinePattern function. The generateLines function creates an array of patterns, starting from a random point, while generateLinePattern builds a series of points within each cell. Then the drawLinePattern function connects these points to form shapes."
   },
   {
     "file": "experiments/fun2.js",
-    "name": "Name of your experiment",
+    "name": "Unseen Harmony",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
   },
   {
     "file": "experiments/fun3.js",
-    "name": "Name of your experiment",
+    "name": "Threads Of Being",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
   },
   {
     "file": "experiments/fun4.js",
-    "name": "Name of your experiment",
+    "name": "Stuck In The Void",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
   },
   {
     "file": "experiments/fun5.js",
-    "name": "Name of your experiment",
+    "name": "Echoes Of Stagnation",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
   },
   {
     "file": "experiments/fun6.js",
-    "name": "Name of your experiment",
+    "name": "Mills Of Thought",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
   },
   {
     "file": "experiments/fun7.js",
-    "name": "Name of your experiment",
+    "name": "Reversed Circle Of Life",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
   },
   {
     "file": "experiments/fun8.js",
-    "name": "Name of your experiment",
+    "name": "Thinking Outside The Box",
+    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+  },
+  {
+    "file": "experiments/fun10.js",
+    "name": "My ADHD brain",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
   },
   {
@@ -44,19 +49,30 @@
     "name": "Name of your experiment",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
   },
-  {
-    "file": "experiments/fun10.js",
-    "name": "Name of your experiment",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
-  },
+  
   {
     "file": "experiments/fun11.js",
-    "name": "Name of your experiment",
+    "name": "The Line of Thought",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
   },
   {
     "file": "experiments/fun12.js",
-    "name": "Name of your experiment",
+    "name": "Untangling The Thought",
+    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+  },
+  {
+    "file": "experiments/fun13.js",
+    "name": "Symphony Of Cultures",
+    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+  },
+  {
+    "file": "experiments/fun14.js",
+    "name": "Silent Farewells",
+    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+  },
+  {
+    "file": "experiments/fun15.js",
+    "name": "Caged Aspirations",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
   }
 ]
