@@ -58,5 +58,11 @@
     "file": "experiments/fun3.js",
     "name": "Threads Of Being",
     "description": "This piece is a coding experiment where I explored using noise to position circles on the canvas. I connected nearby circles with lines based on their distance"
+  },
+  {
+    "file": "experiments/fun15.js",
+    "name": "Experimenting with sound",
+    "description": "This one is still under construction!"
   }
+
 ]
