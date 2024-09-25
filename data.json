@@ -2,61 +2,61 @@
   {
     "file": "experiments/fun10.js",
     "name": "My ADHD brain",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "Inspired by Mark G. Taber's called Tychist Object 011. My recreation shows the wild and creative side of thinking. The lines twist and shift, representing how ideas are always moving around. The piece alternates between two colors to show different states of thought, and it randomly decides the number of columns and rows, which adds variety to the structure. It uses some trigonometric functions to create twisting and shifting lines, kind of mirroring the constant movement of ideas. The code adds randomness but keeps a sense of structure, capturing how order and chaos often mix in our thoughts. Overall, it’s a fun way to explore how creativity can come from a busy brain that’s full of energy."
   },
   {
     "file": "experiments/fun1.js",
     "name": "Wings & Whispers",
-    "description": "Inspired by paper birds and the whispers of feathers, this piece symbolizes the unexpected. Once clicked it reveals shapes of paper birds that are beyond initial perception. For this work, I calculate the position for each cell and draw line patterns using the drawLinePattern function. The generateLines function creates an array of patterns, starting from a random point, while generateLinePattern builds a series of points within each cell. Then the drawLinePattern function connects these points to form shapes."
+    "description": "This is a recreation of Vera Molnár’s ‘Hommage à Dürer.’ It’s about exile, showing how lines keep moving forward and get tangled up until there’s no way back. I was inspired by paper birds and wanted the shapes to reflect that, so they have a similar feel. When you click, new patterns appear that aren’t obvious at first. I created a grid with random line patterns in each cell, and they connect in messy ways, showing how our thoughts and feelings can get complicated."
   },
   {
     "file": "experiments/fun11.js",
     "name": "The Line of Thought",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "This piece is freely inspired by Keith Haring’s 'Dreams and Hopes'. While it doesn't directly mimic his style, I wanted to capture a sense of movement and connection in my own way. I created a grid with random points that form a flowing shape, reflecting how thoughts can come together unexpectedly. When you click, the background color changes, adding a fun twist. The curvy lines represent the complexity of our emotions and dreams, giving it a playful yet meaningful vibe."
   },
   {
     "file": "experiments/fun12.js",
     "name": "Untangling The Thought",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "This piece is kind of inspired by my last work. It’s all about trying to sort out those messy thoughts we all have. I set up a grid and made some points that wiggle around, which shows how our minds can get tangled up sometimes. The animation gives it this fun, lively vibe as the points bounce around. Plus, the background color changes every few seconds, which keeps it fresh and interesting. Overall, it’s a playful look at how we deal with our thoughts and emotions, showing that creativity can be a bit messy."
   },
   {
     "file": "experiments/fun4.js",
     "name": "Stuck In The Void",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "I titled this piece 'Stuck in the Void'. It reflects my feelings of frustration while trying to recreate someone else's work, which turned out to be a lot harder than I expected. This piece captures that sense of being lost and unsure during my portfolio journey."
   },
   {
     "file": "experiments/fun5.js",
     "name": "Echoes Of Stagnation",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "I call this piece 'Echoes of Stagnation'. It’s just a fun experiment with shapes and colors. I wanted to play around with some distortions, and clicking changes the colors. It’s not super deep, but I had a good time creating it!"
   },
   {
     "file": "experiments/fun6.js",
     "name": "Mills Of Thought",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "I call this one 'Mills of Thought' because it kinda reminds me of wind mills. I had a blast experimenting with it, inspired by some cool no-name designs I found online. No deep meanings here, just fun!"
   },
   {
     "file": "experiments/fun7.js",
     "name": "Reversed Circle Of Life",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "I call this one “Reversed Circle of Life.” I wanted to represent how history likes to repeat itself, showing the cycles we go through over time. No real artist inspiration behind it."
   },
   {
     "file": "experiments/fun8.js",
     "name": "Thinking Outside The Box",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "I call this one 'Thinking Outside the Box'. It’s inspired by my previous ADHD piece."
   },
   {
     "file": "experiments/fun13.js",
     "name": "Symphony Of Cultures",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "I call this one 'Symphony of Cultures'. There’s no deep inspiration here; I just liked how it turned out, kind of resembling a map. It’s made up of flowing points that create a chaotic yet harmonious pattern. "
   },
   {
     "file": "experiments/fun14.js",
     "name": "Silent Farewells",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "This piece is an experiment with cellular automata where I tried to grasp the rules and logic behind it."
   },
   {
     "file": "experiments/fun3.js",
     "name": "Threads Of Being",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "This piece is a coding experiment where I explored using noise to position circles on the canvas. I connected nearby circles with lines based on their distance"
   }
 ]

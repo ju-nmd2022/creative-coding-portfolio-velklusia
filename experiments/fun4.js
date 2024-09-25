@@ -10,7 +10,7 @@ function setup() {
     let cols = 30;
     let rows = 30;
     let gridSize = width / cols;
-    let time = frameCount * 0.05; // speed of animation
+    let time = frameCount * 0.05; 
     
     for (let y = 0; y < rows; y++) {
       beginShape();
